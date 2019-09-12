@@ -7,14 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C5FD7D1232ACDDC0089906F /* XKCD_Screen_SaverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C5FD7D0232ACDDC0089906F /* XKCD_Screen_SaverView.h */; };
-		4C5FD7D3232ACDDC0089906F /* XKCD_Screen_SaverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5FD7D2232ACDDC0089906F /* XKCD_Screen_SaverView.m */; };
+		4C2F20F1232AD06D000C1FE3 /* XKCD_Screen_SaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2F20F0232AD06D000C1FE3 /* XKCD_Screen_SaverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C2F20EF232AD06D000C1FE3 /* XKCD Screen Saver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XKCD Screen Saver-Bridging-Header.h"; sourceTree = "<group>"; };
+		4C2F20F0232AD06D000C1FE3 /* XKCD_Screen_SaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XKCD_Screen_SaverView.swift; sourceTree = "<group>"; };
 		4C5FD7CD232ACDDC0089906F /* XKCD Screen Saver.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "XKCD Screen Saver.saver"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C5FD7D0232ACDDC0089906F /* XKCD_Screen_SaverView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XKCD_Screen_SaverView.h; sourceTree = "<group>"; };
-		4C5FD7D2232ACDDC0089906F /* XKCD_Screen_SaverView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XKCD_Screen_SaverView.m; sourceTree = "<group>"; };
 		4C5FD7D4232ACDDC0089906F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,9 +47,9 @@
 		4C5FD7CF232ACDDC0089906F /* XKCD Screen Saver */ = {
 			isa = PBXGroup;
 			children = (
-				4C5FD7D0232ACDDC0089906F /* XKCD_Screen_SaverView.h */,
-				4C5FD7D2232ACDDC0089906F /* XKCD_Screen_SaverView.m */,
 				4C5FD7D4232ACDDC0089906F /* Info.plist */,
+				4C2F20F0232AD06D000C1FE3 /* XKCD_Screen_SaverView.swift */,
+				4C2F20EF232AD06D000C1FE3 /* XKCD Screen Saver-Bridging-Header.h */,
 			);
 			path = "XKCD Screen Saver";
 			sourceTree = "<group>";
@@ -62,7 +61,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C5FD7D1232ACDDC0089906F /* XKCD_Screen_SaverView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +96,7 @@
 				TargetAttributes = {
 					4C5FD7CC232ACDDC0089906F = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -133,7 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C5FD7D3232ACDDC0089906F /* XKCD_Screen_SaverView.m in Sources */,
+				4C2F20F1232AD06D000C1FE3 /* XKCD_Screen_SaverView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +253,21 @@
 		4C5FD7D8232ACDDC0089906F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "XKCD Screen Saver/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "wherearemypants.com.XKCD-Screen-Saver";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XKCD Screen Saver/XKCD Screen Saver-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Debug;
@@ -267,12 +275,20 @@
 		4C5FD7D9232ACDDC0089906F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "XKCD Screen Saver/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "wherearemypants.com.XKCD-Screen-Saver";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XKCD Screen Saver/XKCD Screen Saver-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = saver;
 			};
 			name = Release;
